@@ -8,10 +8,10 @@
     <body>
         <div ng-controller="DateController as dateCtrl" id="dateDisplay">
             <h2>Date Display</h2>
-            <p>Default Format: {{dateCtrl.currentDate | date}}</p>
-            <p>Full Date Format: {{dateCtrl.currentDate | date:'fullDate'}}</p>
-            <p>Short Date Format: {{dateCtrl.currentDate | date:'short'}}</p>
-            <p>Custom Date Format (MM/DD/YYYY): {{dateCtrl.currentDate | date:'MM/dd/yyyy'}}</p>
+            Current Date and Time: {{ dateCtrl.currentDate}}<br />
+            Short Date: {{ dateCtrl.currentDate|date: 'short'}}<br />
+            Long Date: {{ dateCtrl.currentDate |date: 'fullDate'}}<br />
+            Medium Date: {{ dateCtrl.currentDate| date: 'medium'}}
         </div>
         <script>
             var app = angular.module('dateApp', []);
