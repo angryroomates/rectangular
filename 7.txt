@@ -14,6 +14,7 @@ and Delete) for managing users-->
                     <th>Name</th>
                     <th>Email</th>
                     <th>Action</th>
+                </tr>
             </thread>
             <tbody>
                 <tr ng-repeat="user in users">
