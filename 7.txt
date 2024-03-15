@@ -9,13 +9,13 @@ and Delete) for managing users-->
     <body ng-controller="userController">
         <h1>User Management</h1>
         <table border="1">
-            <thread>
+            <thead>
                 <tr>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Action</th>
                 </tr>
-            </thread>
+            </thead>
             <tbody>
                 <tr ng-repeat="user in users">
                     <td>{{user.name}}</td>
