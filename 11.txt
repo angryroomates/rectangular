@@ -3,26 +3,23 @@ Note: The default details of students may be included in the program.-->
 <!DOCTYPE html>
 <html ng-app="studentApp">
     <head>
-        <title>Angular JS Student Details</title>
+        <title>Student Details Converter</title>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     </head>
     <body>
-        <div ng-controller="StudentController" id="studentDetails">
+        <div ng-controller="StudentController as ctrl">
             <h2>Student Details</h2>
-            <label for="studentName">Name:</label>
-            <input type="text" id="studentName" ng-model="student.name" required>
-            <label for="studentBranch">Branch:</label>
-            <input type="text" id="studentBranch" ng-model="student.branch" required>
-            <p>Uppercase Name: {{student.name|uppercase}}</p>
-            <p>Uppercase Branch: {{student.branch|uppercase}}</p>
+            <ul>
+                <li ng-repeat="student in ctrl.students">
+                    {{student.name | uppercase }} - {{ student.age }}
+                </li>
+            </ul>
         </div>
         <script>
-            var app = angular.module('studentApp',[])
-            app.controller("StudentController",function($scope){
-                $scope.student = {
-                    name:'John Doe',
-                    branch:'Computer Science'
-                };
+            angular.module('studentApp',[]).controller("StudentController",function(){
+                this.students=[
+                    {name:'John Doe', age :20},
+                ]
             });
         </script>
     </body>
