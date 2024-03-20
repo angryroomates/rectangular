@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Details with CGPA</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="myController">
+            <h2>Student Details</h2>
+            <p>Total number of student: {{student.length}}</p>
+            <table border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>CGPA</th>
+                </tr>
+                <tr ng-repeat="x in student">
+                    <td>{{x.name}}</td>
+                    <td>{{x.cgpa}}</td>
+                </tr>
+            </table>
+        </div>
+        <script src="prg5Static.js"></script>
+    </body>
+</html>
