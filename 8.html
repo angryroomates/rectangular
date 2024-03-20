@@ -25,7 +25,11 @@ password fields-->
                                 ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/" required>
                             <span ng-show="loginForm.password.$error.required &&
                             loginForm.password.$dirty">Password is required. </span>
-
+<!--The regular expression can be broken down further as follows:
+^: The input must start with
+(?=.*[A-Za-z]): Followed by at least one letter
+(?=.*\d): Followed by at least one digit
+[A-Za-z\d]{8,}$: Ending with any combination of letters and digits, with a minimum length of 8-->
                             <span ng-show="loginForm.password.$error.pattern && loginForm.password.$dirty">
                                 Password must be alphanumeric and at least 8 characters long.
                             </span>
