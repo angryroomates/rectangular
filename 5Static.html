@@ -25,3 +25,10 @@ details may be included in the program-->
         <script src="prg5Static.js"></script>
     </body>
 </html>
+
+var app = angular.module("myApp",[]);
+app.controller("myController", function($scope){
+$scope.student=[
+{ name:'Raja',cgpa:8.9},
+{ name:'Zoe',cgpa:5.6}];
+});
